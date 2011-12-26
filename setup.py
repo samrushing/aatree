@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages, Extension
 from Cython.Distutils import build_ext
 
+import sys
 # see http://www.velocityreviews.com/forums/t693861-cython-setuptools-not-working-with-pyx-only-with-c-files.html
 try:
     import Cython
