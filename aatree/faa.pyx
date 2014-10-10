@@ -134,7 +134,11 @@ cdef aa_node tree_remove (fist self, aa_node root, object key):
             self.item.key = self.heir.key
             self.item.val = self.heir.val
             self.item = tree_nil
-            return root0.r
+            # here we differ from AA's algorithm.
+            if root0.r is tree_nil:
+                return root0.l
+            else:
+                return root0.r
         else:
             return root0
     else:
